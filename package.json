@@ -1,21 +1,22 @@
 {
-  "name": "make-readme",
-  "homepage": "https://github.com/qobulovasror/make-readme#readme",
+  "name": "readme-generator",
+  "homepage": "https://github.com/qobulovasror/readme-generator#readme",
   "version": "1.0.0",
   "engines": {
     "node": ">=16"
   },
   "description": "This is simple script to generate README file from template.",
   "main": "bin/index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postspec": "npm run clean",
     "clean": "rm -rf test/fixtures/test*.js test/fixtures/test*.md",
-    "prepush": "npm run lint",
     "killall": "ps auxww | grep node | grep -v grep | awk '{ print $2 }' | xargs kill -9"
   },
   "bin": {
-    "makerm": "./bin/index.js"
+    "mkreadme": "./bin/index.js",
+    "mkrm": "./bin/index.js"
   },
   "keywords": [
     "cli",
@@ -28,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/qobulovasror/make-readme.git"
+    "url": "https://github.com/qobulovasror/readme-generator.git"
   },
   "license": "MIT",
   "dependencies": {
