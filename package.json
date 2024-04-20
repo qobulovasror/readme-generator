@@ -1,0 +1,40 @@
+{
+  "name": "make-readme",
+  "homepage": "https://github.com/qobulovasror/make-readme#readme",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=16"
+  },
+  "description": "This is simple script to generate README file from template.",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postspec": "npm run clean",
+    "clean": "rm -rf test/fixtures/test*.js test/fixtures/test*.md",
+    "prepush": "npm run lint",
+    "killall": "ps auxww | grep node | grep -v grep | awk '{ print $2 }' | xargs kill -9"
+  },
+  "bin": {
+    "makerm": "./bin/index.js"
+  },
+  "keywords": [
+    "cli",
+    "development",
+    "terminal"
+  ],
+  "author": {
+    "name": "Qobulov Asror",
+    "url": "https://github.com/qobulovasror"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qobulovasror/make-readme.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "boxen": "^7.1.1",
+    "chalk": "^4.1.2",
+    "figlet": "^1.7.0",
+    "yargs": "^17.1.1-candidate.0"
+  }
+}
