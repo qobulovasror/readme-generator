@@ -1,7 +1,7 @@
 {
-  "name": "readme-generator",
+  "name": "mkrm",
   "homepage": "https://github.com/qobulovasror/readme-generator#readme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "node": ">=16"
   },
@@ -21,7 +21,10 @@
   "keywords": [
     "cli",
     "development",
-    "terminal"
+    "terminal",
+    "mkrm",
+    "readme",
+    "generator"
   ],
   "author": {
     "name": "Qobulov Asror",
@@ -37,5 +40,12 @@
     "chalk": "^4.1.2",
     "figlet": "^1.7.0",
     "yargs": "^17.1.1-candidate.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/qobulovasror"
+  },
+  "bugs": {
+    "url": "https://github.com/qobulovasror/readme-generator/issues"
   }
+  
 }

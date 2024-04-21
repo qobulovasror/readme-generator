@@ -81,15 +81,15 @@ You can run the program via npm or by downloading this repository
   1. **Install package:**
   
   ```bash
-  npm i -g readme-generator
+  npm i -g mkrm
   ```
   or
   ```bash
-  npm install -g readme-generator
+  npm install -g mkrm
   ```
   or
   ```bash
-  yarn global add readme-generator
+  yarn global add mkrm
   ```
 
  ### Useing the program 🕹️
