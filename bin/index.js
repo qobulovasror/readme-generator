@@ -9,6 +9,8 @@ import makeReadme from "./template.js";
 import { writeFileSync } from "fs";
 // import yargs from "yargs";
 
+import { againText } from "../defaultParams/params.js";
+
 const log = console.log;
 const args = process.argv.slice(2);
 const rl = readline.createInterface({
@@ -34,56 +36,109 @@ if (args.length === 0) {
   // Create a readline interface to handle user input and output
   const projectCon = {};
 
-  //   rl.question(
-  //     chalk`{bold Enter the project type (m - mobile, b - backend, f - frontend, o - other): }\n`,
-  //     (proType) => {
-  //       proType = proType.trim();
-  //       if (
-  //         proType != "m" &&
-  //         proType != "b" &&
-  //         proType != "f" &&
-  //         proType != "o"
-  //       ) {
-  //         return log(chalk`{red Invalid project type "${proType}"} \n Try again`);
-  //       } else {
-  //         projectCon.type = proType;
-  //       }
-  //     }
-  //   );
-
-
-  //loyha nomini papka nomidan olish
+  //select project type
   await rl
-    .question(chalk`{bold Enter a project name: }`)
+    .question(
+      chalk`{bold Enter the project type (m - mobile, b - backend, f - frontend, o - other): }`
+    )
+    .then((proType) => {
+      proType = proType.trim();
+      if (
+        proType != "m" &&
+        proType != "b" &&
+        proType != "f" &&
+        proType != "o"
+      ) {
+        log(chalk`{red Invalid project type "${proType}"}${againText}`);
+        process.exit(0);
+      } else {
+        projectCon.type = proType;
+      }
+    });
+
+  // asking for project name
+  await rl
+    .question(
+      chalk`{bold Enter a project name: (${process.cwd().split("\\").pop()}) }`
+    )
     .then((projectName) => {
       // Check that the provided package name is valid
       let regexp = new RegExp(
         /^(?:@[a-z0-9][a-z0-9-]*\/)?[a-z0-9](?:[a-z0-9-]*[a-z0-9])\/?$/i
       );
-      if (!regexp.test(projectName)) {
-        return log(
-          chalk`{red Invalid project name "${projectName}"} \n Try again`
-        );
+      if (!regexp.test(projectName) && projectName != "") {
+        log(chalk`{red Invalid project name "${projectName}"}${againText}`);
+        process.exit(0);
       } else {
-        projectCon.name = projectName.trim().replace(/ /g, "-");
+        projectCon.name =
+          projectName == ""
+            ? process.cwd().split("\\").pop()
+            : projectName.trim().replace(/ /g, "-");
       }
     });
 
+  //asking a project description
   await rl
-    .question(chalk`{bold Enter a description for the project: }`)
+    .question(chalk`{bold Enter a description for the project 📃: }`)
     .then((desc) => {
       if (desc.length == 0) {
-        return log(chalk`{red Invalid project description "${desc}"}`);
+        log(chalk`{red Invalid project description "${desc}"}${againText}`);
+        process.exit(0);
       } else {
         projectCon.decrip = desc.trim();
       }
     });
 
+  //get used tools
+  await rl
+    .question(
+      chalk`{bold Enter the technologies or Tools used in the project 🛠️ (ex: Nodejs, Express, MongoDB): }`
+    )
+    .then((techno) => {
+      if (techno) projectCon.techno = techno.split(",");
+    });
+
+  //get repo url
+  await rl
+    .question(chalk`{bold Enter the github URL of project (optional)🔗: }`)
+    .then((url) => {
+      if (url.length != 0) {
+        projectCon.url = url.trim();
+      }
+    });
+
+  //get license type
+  await rl
+    .question(chalk`{bold Enter the license type 🪪: (MIT)  }`)
+    .then((licen) => {
+      if (licen.length == 0) {
+        projectCon.licen = "MIT";
+      } else {
+        projectCon.licen = licen.trim();
+      }
+    });
+
+  //confirm that everything is correct
+  await rl
+    .question(chalk`{bold Confirm that everything is correct ✔️: (yes) }`)
+    .then((ans) => {
+      ans = ans.toLocaleLowerCase();
+      if (!(ans.length == 0 || ans == "y" || ans == "yes")) {
+        log(
+          chalk.red(
+            "According to your answer, the README file could not be created"
+          )
+        );
+        process.exit(0);
+      }
+    });
+
+  // pro type, name, desictip, tools, url , licen
   const fileBody = makeReadme(projectCon);
   writeFileSync(`${process.cwd()}/README.md`, fileBody);
   log(
     boxen(
-      `README file created successfully 🎉 \nThe README file is ready for upload 🚀`,
+      `README file created successfully 🎉 \nThe README file is ready for edit 📝 and upload 🚀`,
       {
         padding: 1,
         borderColor: "green",

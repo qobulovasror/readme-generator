@@ -200,7 +200,7 @@ This project is provided "as is", without warranty of any kind, express or impli
 
 ## Conclusion 🔚
 
-Congratulations! You've reached the end of the README file for our backend project 😊. We hope this documentation has provided you with all the necessary information to understand, install, and contribute to the project effectively.
+Congratulations! You've reached the end of the README file for our project 😊. We hope this documentation has provided you with all the necessary information to understand, install, and contribute to the project effectively.
 
 If you have any questions, feedback, or suggestions, please don't hesitate to reach out to us. Your input is valuable and helps us improve the project for everyone.
 
