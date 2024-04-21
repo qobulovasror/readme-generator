@@ -17,6 +17,7 @@
 </p>
   
 <!-- You can put pictures, gifs, screenshots or videos for the program here  -->
+![image](https://github.com/qobulovasror/readme-generator/assets/71517683/1af0de4c-1795-4f72-9b27-5a9ca923969d)
 
   
   <!-- About -->
