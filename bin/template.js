@@ -20,9 +20,8 @@ const makeReadme = (configs) => {
 };
 
 const getName = (name) => {
-  return `
-<!-- Project name -->
-<h1 style="font-size: 45px">
+  return `<!-- Project name -->
+<h1  align="center"  style="font-size: 45px">
 <center>${name}</center>
 </h1>
 <hr>`;
