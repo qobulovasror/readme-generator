@@ -23,8 +23,7 @@
   <!-- About -->
 
   ## About 📖
-  
-  Explain briefly what your project is about, its main features, and why it's useful.
+Command line (CLI) program that generates a readme file for your project. The readme file contains instructions for your project. The program is built using NodeJs. You install it globally on your computer and run it at the location of your project. It will then create a Readme file
 
   
   <!-- Key Features -->
@@ -33,33 +32,33 @@
   
   ---
   
-  - Feature 1
-  - Feature 2
-  - Feature 3
-  - Emoji support in preview 🎉
-  <!-- Technologies Used -->
+  - There are ready-made templates for your project
+  - Choosing a template depending on the type of project
+  - Uses Emoji in instructions
+  - easy to use by short command
 
+
+<!-- Technologies Used -->
 ## Technologies Used 🤖
 
 ---
 
  - **nodejs**
-
- - ****
+ - **npm** or **yarn**
 
 ## Getting Started 👨🏻‍💻
   ---
   
-  These instructions will help you to get a copy of the project up and running on your local machine for development and testing purposes.
-  
-  ### Prerequisites
+You can run the program via npm or by downloading this repository
+
+### Prerequisites
   
   Before you begin, ensure you have met the following requirements:
 - **nodejs**
-- ****
+- **npm** or **yarn**
 
   
-  ### Installation and Configuration 🎯
+### Installation and Configuration 🎯
 
   Follow these steps to get the project up and running on your local machine:
 
@@ -71,11 +70,37 @@
   2. Navigate to the project directory:
 
   ```bash
-  cd "Readme-Generator"
+  cd "readme-generator"
   ``` 
   3. **Open code editor**
+  ```bash
+  npm i -g .
+  ```
+
+### Installation using npm 🎯
+  1. **Install package:**
   
-  4. **Run it using the code editor**
+  ```bash
+  npm i -g readme-generator
+  ```
+  or
+  ```bash
+  npm install -g readme-generator
+  ```
+  or
+  ```bash
+  yarn global add readme-generator
+  ```
+
+ ### Useing the program 🕹️
+  1. **You will go to the location of your project**:
+  ```bash
+  cd yourProject
+  ```
+  2. **Run app**
+  ```bash
+  mkrm
+  ```
 
   
   
