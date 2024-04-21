@@ -38,12 +38,12 @@ const getMenu = () => {
   return `
   <!--menu-->
   <p align="center">
-  <a href="#key-features">Key Features</a> •
-  <a href="#technologies-used">Technologies Used</a> •
-  <a href="#getting-started">Getting Started</a> •
-  <a href="#contributing">Contributing</a> •
-  <a href="#license">License</a> •
-  <a href="#conclusion">Conclusion</a> •
+  <a href="#key-features-">Key Features</a> •
+  <a href="#technologies-used-">Technologies Used</a> •
+  <a href="#getting-started-">Getting Started</a> •
+  <a href="#contributing-">Contributing</a> •
+  <a href="#license-">License</a> •
+  <a href="#conclusion-">Conclusion</a> •
 </p>`;
 };
 
