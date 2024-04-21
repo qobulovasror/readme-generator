@@ -51,6 +51,8 @@ if (args.length === 0) {
   //     }
   //   );
 
+
+  //loyha nomini papka nomidan olish
   await rl
     .question(chalk`{bold Enter a project name: }`)
     .then((projectName) => {

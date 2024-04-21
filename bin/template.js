@@ -10,12 +10,15 @@ const makeReadme = (configs) => {
 };
 
 const getName = (name) => {
-  return `<h1 align="center"><br>${name}<br></h1> <hr>`;
+  return `
+<h1 style="font-size: 45px">
+<center>${name}</center>
+</h1> <hr>`;
 };
 
 const getDescrip = (desc) => {
   return `
-  <!-- Description -->
+<!-- Description -->
 <h4 align="center">${desc}.</h4>
 `;
 };
@@ -36,7 +39,7 @@ const getMenu = (desc) => {
 const forImg = (desc) => {
   return `
   
-  <!-- You can put pictures, gifs, screenshots or videos for the program here  -->
+<!-- You can put pictures, gifs, screenshots or videos for the program here  -->
 
   `;
 };
