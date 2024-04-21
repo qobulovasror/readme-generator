@@ -1,20 +1,19 @@
-
 <!-- Project name -->
-<h1 style="font-size: 45px">
-<center>make readme</center>
+<h1  align="center"  style="font-size: 45px">
+<center>Readme-Generator</center>
 </h1>
 <hr>
 <!-- Description -->
-<h4 align="center">sdfs</h4>
+<h4 align="center">A CLI program that generates README files for projects</h4>
 
   <!--menu-->
   <p align="center">
-  <a href="#key-features">Key Features</a> •
-  <a href="#technologies-used">Technologies Used</a> •
-  <a href="#getting-started">Getting Started</a> •
-  <a href="#contributing">Contributing</a> •
-  <a href="#license">License</a> •
-  <a href="#conclusion">Conclusion</a> •
+  <a href="#key-features-">Key Features</a> •
+  <a href="#technologies-used-">Technologies Used</a> •
+  <a href="#getting-started-">Getting Started</a> •
+  <a href="#contributing-">Contributing</a> •
+  <a href="#license-">License</a> •
+  <a href="#conclusion-">Conclusion</a> •
 </p>
   
 <!-- You can put pictures, gifs, screenshots or videos for the program here  -->
@@ -43,7 +42,9 @@
 
 ---
 
- - **python**
+ - **nodejs**
+
+ - ****
 
 ## Getting Started 👨🏻‍💻
   ---
@@ -53,7 +54,8 @@
   ### Prerequisites
   
   Before you begin, ensure you have met the following requirements:
-    - **python**
+- **nodejs**
+- ****
 
   
   ### Installation and Configuration 🎯
@@ -63,59 +65,17 @@
   1. **Clone the repository:**
   
   ```bash
-  git clone https://github.com/yourusername/yourproject.git
+  git clone https://github.com/qobulovasror/readme-generator.git
   ``` 
   2. Navigate to the project directory:
 
   ```bash
-  cd make readme
+  cd "Readme-Generator"
   ``` 
-        
-  3. Create a virtual environment (optional but recommended):
-
-  ```bash
-  virtualenv venv
-  ```
-
-  Activate the virtual environment:
-
-    - On Windows:
-    ```cmd
-    venvScriptsactivate
-    ```
-    - On macOS and Linux:
-     ```bash
-     source venv/bin/activate
-     ```
-
-  4. Install dependencies:
-
-  ```bash
-  pip install -r requirements.txt
-  ```
-
-  5. Set up environment variables:Copy the example environment file and modify it according to your configuration:
-
-  ```bash
-  cp .env.example .env
-  ```
-
-  Update the .env file with your database credentials, API keys, etc.
-
-  6. Run migrations:
-
-  ```bash
-  python manage.py migrate
-  ```
-
-  7. Start the development server:
-
-  ```bash
-  python manage.py runserver
-  ```
-
-  8. Visit http://localhost:8000 in your browser to view the application.You can now begin interacting with the API or accessing the application's endpoints.
+  3. **Open code editor**
   
+  4. **Run it using the code editor**
+
   
   
 <!-- Contributing -->
@@ -131,7 +91,7 @@ We welcome contributions from the community to improve the project. To contribut
 
 2. **Clone the forked repository:**
    ```bash
-   git clone https://github.com/yourusername/yourproject.git
+   git clone https://github.com/qobulovasror/readme-generator.git
    ```
 3. **Create a new branch:**
    ```bash
