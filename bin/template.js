@@ -102,7 +102,7 @@ const forGetStarted = (type, url, techno, name) => {
 
   let toolStr = ""
   for(let i of techno){
-    toolStr += `  - **${i}**\n`
+    toolStr += `- **${i}**\n`
   }
 
 
@@ -114,7 +114,7 @@ const forGetStarted = (type, url, techno, name) => {
   ### Prerequisites
   
   Before you begin, ensure you have met the following requirements:
-  ${toolStr}
+${toolStr}
   
   ### Installation and Configuration 🎯
 
@@ -132,7 +132,7 @@ const forGetStarted = (type, url, techno, name) => {
   2. Navigate to the project directory:
 
   \`\`\`bash
-  cd ${name}
+  cd "${name}"
   \`\`\` `;
 
   if(type=="f"){

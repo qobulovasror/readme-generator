@@ -73,7 +73,7 @@ if (args.length === 0) {
         projectCon.name =
           projectName == ""
             ? process.cwd().split("\\").pop()
-            : projectName.trim().replace(/ /g, "-");
+            : projectName.trim()//.replace( "-", / /g,);
       }
     });
 
