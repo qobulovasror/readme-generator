@@ -42,7 +42,7 @@
     "yargs": "^17.1.1-candidate.0"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/qobulovasror"
+    "registry": "https://registry.npmjs.com/"
   },
   "bugs": {
     "url": "https://github.com/qobulovasror/readme-generator/issues"
